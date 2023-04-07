@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Question2 {
+public class TaxCalculator {
     public static void main(String[] args) throws IOException {
         ArrayList<String> list = new ArrayList<>(Files.readAllLines(Paths.get("src/main/java/ReadingAndSortingTextFile/textfile.txt")));
         System.out.println("Before sorting: " + list);
