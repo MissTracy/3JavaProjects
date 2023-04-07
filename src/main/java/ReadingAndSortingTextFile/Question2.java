@@ -8,7 +8,7 @@ import java.util.Collections;
 
 public class Question2 {
     public static void main(String[] args) throws IOException {
-        ArrayList<String> list = new ArrayList<>(Files.readAllLines(Paths.get("src/main/java/ReadingAndSortingTextFile/question2.txt")));
+        ArrayList<String> list = new ArrayList<>(Files.readAllLines(Paths.get("src/main/java/ReadingAndSortingTextFile/textfile.txt")));
         System.out.println("Before sorting: " + list);
         Collections.sort(list);
         System.out.println("After sorting: " + list);
