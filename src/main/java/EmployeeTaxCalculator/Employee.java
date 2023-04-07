@@ -11,29 +11,21 @@ public class Employee {
         this.salary = salary;
     }
 
-    public double calculateTax() {
-        double tax = 0.0;
-        if (salary > 40000) {
-            tax = salary * 0.25;
-        } else if (salary > 20000) {
-            tax = salary * 0.20;
-        } else if (salary > 10000) {
-            tax = salary * 0.10;
-        }
-        return tax;
-    }
+     public double calculateTax() {
+       double tax = 0.0;
+       tax = salary > 40000 ? salary * 0.25 : tax;
+       tax = salary > 20000 && salary <= 40000 ? salary * 0.20 : tax;
+       tax = salary > 10000 && salary <= 20000 ? salary * 0.10 : tax;
+       return tax;
+   }
 
-    public double getTaxPercentage() {
-        double taxPercentage = 0.0;
-        if (salary > 40000) {
-            taxPercentage = 0.25;
-        } else if (salary > 20000) {
-            taxPercentage = 0.20;
-        } else if (salary > 10000) {
-            taxPercentage = 0.10;
-        }
-        return taxPercentage;
-    }
+       public double getTaxPercentage() {
+       double taxPercentage = 0.0;
+       taxPercentage = salary > 40000 ? 0.25 : taxPercentage;
+       taxPercentage = salary > 20000 && salary <= 40000 ? 0.20 : taxPercentage;
+       taxPercentage = salary > 10000 && salary <= 20000 ? 0.10 : taxPercentage;
+       return taxPercentage;
+   }
 
     public void displayEmployeeInfo() {
         System.out.println("Name: " + name);
